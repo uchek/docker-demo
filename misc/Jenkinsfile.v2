@@ -17,9 +17,10 @@ node {
         * EACCES: permission denied, mkdir '/.config'
         */
         'HOME=.',
-          ])
+          ]){
        sh 'npm install --only=dev'
        sh 'npm test'
+     }
      }
    }
    stage('test with a DB') {
